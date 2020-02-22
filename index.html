@@ -131,36 +131,6 @@ if(HM_DOM && HM_Mac) {
 
 if(window.event + "" == "undefined") event = null;
 
-//account for different browsers h/w measurements
-var HM_OS_YOFFSET = 12;
-var HM_OS_XOFFSET = 6;
-if(HM_NS4 && HM_Mac) {
-	HM_OS_YOFFSET += -6;
-	HM_OS_XOFFSET += -5;
-} else if(HM_IE && HM_Mac) {
-	HM_OS_YOFFSET += -4;
-	HM_OS_XOFFSET += -2;
-} else if(HM_NS4 &! HM_Mac) {
-	HM_OS_YOFFSET += -1;
-	HM_OS_XOFFSET += -6;
-} else if(HM_NS6 &! HM_Mac) {
-	HM_OS_YOFFSET += 0;
-	HM_OS_XOFFSET += -8;
-} else if(HM_NS6 && HM_Mac) {
-	HM_OS_YOFFSET += -4;
-	HM_OS_XOFFSET += -5;
-} 
-if(HM_MOZ) {
-	HM_OS_YOFFSET += 0;
-	//HM_OS_XOFFSET += -8;
-	HM_OS_XOFFSET += 8;
-}
-if(HM_SAF) {
-	HM_OS_YOFFSET += -3;
-	HM_OS_XOFFSET += 2;
-}
-
-
 //account for brand hats
 var brand_height = 0;
 if ("EA"=="EA"){
